@@ -1,0 +1,9 @@
+<h1>Post.title</h1>
+<p><%= @post.content %> </p>
+<p><%= @post.created_at %></p>
+<p><%= @post.updated_at %>p</p>
+<%= link_to 'Posts' ,post_path %>
+<br>
+<%= link_to 'Edit post', edit_post_path(id: @post.id) %>
+<br>
+<%= link_to 'Delete post', post_path(id: @post.id), method: :delete, data: { confirm: "Are you sure?" }%>
